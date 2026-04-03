@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* --- HEADER LAYOUT: Text Left, Image Right --- */
+.flex-container {
+  display: flex;
+  align-items: center; /* Vertically centers the text and image */
+  justify-content: center; /* Centers the whole block on the screen */
+  gap: 50px; /* Space between the text and your photo */
+  padding: 80px 10%;
+}
+
+.flex-item {
+  max-width: 500px;
+}
+
+#img img {
+  width: 220px; /* Adjusted size for your profile photo */
+  height: 220px;
+  border-radius: 50%; /* Circular look */
+  border: 3px solid #38bdf8;
+  object-fit: cover;
+}
+
+/* --- TEXT & BUTTON STYLING --- */
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  transition: 0.4s;
+}
+
+h1:hover {
+  background: linear-gradient(to top, #022950 0%, #71ebc8 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 55px;
+  background-clip: var();
+}
+h2 {
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+h2:hover {
+  text-shadow: 0 0 10px #05eecf;
+
+  text-transform: uppercase;
+}
+.tagline {
+  color: #38bdf8;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.button a {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.button a:hover {
+  background: #38bdf8;
+  color: black;
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+/* --- SKILLS & PROJECTS GRID --- */
+section {
+  padding: 40px 10%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 8px;
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+  background: #69c7f0;
+  color: black;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+/* --- CERTIFICATES: Small Icons --- */
+/* --- CERTIFICATES SECTION --- */
+#certi {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 20px;
+}
+
+/* This is the 'anchor' that keeps the text from flying away */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+#certi img {
+  width: 100px; /* Small as requested */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#certi img:hover {
+  transform: translateY(-5px);
+}
+
+/* --- THE TOOLTIP TEXT --- */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 160px; /* Adjusted for better reading */
+  background: linear-gradient(to top, #0d78e2 0%, #95f1d7 100%);
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+
+  /* POSITIONING LOGIC */
+  position: absolute;
+  z-index: 99;
+  top: 100%; /* Places it exactly below the image */
+  left: 50%;
+  transform: translateX(
+    -50%
+  ); /* Centers it horizontally relative to the image */
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Prevents the tooltip from flickering */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #020617;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+#gh {
+  margin-left: 5px;
+}
+#em {
+  color: white;
+}
+#em:hover{
+  color: #2885e2;
+}
